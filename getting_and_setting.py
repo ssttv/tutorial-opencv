@@ -8,3 +8,12 @@ ap.add_argument("-i", "--image", required=True,
 
 image = cv2.imread(vars(ap.parse_args())["image"])
 cv2.imshow("Original", image)
+
+(b, g, r) = image[0, 0]
+print("Pixel at (0, 0) - Red: {}, Green: {}, Blue: {}".format(r,
+                                                              g, b))
+
+image[0, 0] = (0, 0, 255)
+(b, g, r) = image[0, 0]
+print("New values of the pixel at (0, 0) - Red: {}, Green: {}, Blue: {}".format(r,
+                                                              g, b))
