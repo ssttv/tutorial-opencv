@@ -14,3 +14,7 @@ cv2.imshow("Original", image)
 M = np.float32([[1, 0, 25], [0, 1, 50]])
 shifted = cv2.warpAffine(image, M, (image.sape[1], image.shape[0]))
 cv2.imshow("Shifted Down-Right", shifted)
+
+M = np.float32([[1, 0, -50], [0, 1, -90]])
+shifted = cv2.warpAffine(image, M, (image.sape[1], image.shape[0]))
+cv2.imshow("Shifted Up-Left", shifted)
