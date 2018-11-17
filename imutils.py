@@ -12,5 +12,6 @@ def rotate(image, angle, center=None, scale=1.0):
     if center is None:
         center = (w / 2, h / 2)
 
-        M = cv2.getRotationMatrix2D(center, angle, scale)
-        rotated = cv2.warpAffine(image, M, (w, h))
+    M = cv2.getRotationMatrix2D(center, angle, scale)
+    rotated = cv2.warpAffine(image, M, (w, h))
+    return rotated
